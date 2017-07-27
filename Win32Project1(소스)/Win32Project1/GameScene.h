@@ -1,0 +1,115 @@
+#pragma once
+#include "ZeroIScene.h"
+#include "ZeroSceneManager.h"
+#include "MainScene.h"
+#include "ZeroSprite.h"
+#include "ZeroInputManager.h"
+#include "ZeroCameraManager.h"
+#include "Tile.h"
+#include "Struct.h"
+#include "Number.h"
+#include "DataManager.h"
+#include "ZeroFont.h"
+class GameScene : public ZeroIScene
+{
+private:
+	int cameraX;
+	int cameraY;
+	int year;
+	int month;
+	float time;
+	int tmps;
+	int tmp;
+	int yeartmp;
+public:
+	GameScene();
+	~GameScene();
+	ZeroSprite *cursor[3];
+	ZeroSprite *menu;
+	ZeroSprite *canvas;
+	ZeroSprite *coin;
+	ZeroSprite *background;
+	ZeroSprite *gaze;
+	ZeroSprite *bar;
+	ZeroSprite *chang;
+	ZeroSprite *popup;
+	ZeroSprite *percent;
+	ZeroSprite *person;
+	ZeroSprite *goexit;
+	ZeroSprite *gomain;
+	ZeroSprite *passmonth;
+	ZeroSprite *upgradeUI;
+	ZeroSprite *schoolpolicy;
+	ZeroSprite *policypopup;
+	ZeroSprite *notice;
+	ZeroSprite *monthly;
+	ZeroSprite *monthlyS;
+	ZeroSprite *policy[6];
+	ZeroSprite *onpolicy[6];
+	ZeroSprite *inpolicy[6];
+	ZeroSprite *tripop;
+	ZeroSprite *wheretrip[4];
+	ZeroSprite *onwheretrip[4];
+	ZeroSprite *gameOver;
+	ZeroSprite *yes;
+	ZeroSprite *no;
+	ZeroSprite *entrance;
+	ZeroSprite *graduate;
+	ZeroSprite *party;
+	ZeroSprite *canP;
+	ZeroSprite *overGame;
+	ZeroSprite *conCheck;
+	ZeroSprite *lucid;
+	ZeroSprite *eventShow[4];
+	ZeroSprite *tree[4];
+	ZeroSprite *endYear;
+	ZeroSprite *endConst;
+	Struct *construct[5];
+	Struct *read;
+	Number *monthlySo[6];
+	Number *number[6];
+	Number *money[5];
+	Number *LegendOfZelda[3];
+	Number *Link[3];
+	Number *Linkle;
+	Number *coco[4];
+	Number *peopleNum[3];
+	Number *moneyNum[4];
+	Number *happyNum[3];
+	Number *yearNum[4];
+	Tile *tile;
+	DataManager *data;
+	int whereCon;
+	bool showEvent[4];
+	bool lucidonce;
+	bool once;
+	bool cameraLock;
+	bool isGameOver;
+	bool popupRender;
+	bool noticeRender;
+	bool monthlyRender;
+	bool policyRender;
+	bool conRender;
+	bool isClicked;
+	bool tripRender;
+	bool partyRender;
+	bool graduateRender;
+	bool entranceRender;
+	bool endYearRender;
+	bool endConstRender;
+	bool onStruct();
+	bool overStruct();
+	bool lucidRender;
+	int checkChoice();
+	int checkPolicy();
+	int howHappy;
+	void Update(float eTime);
+	void Render();
+	void SetPos();
+	void MoveMap(float e);
+	void Canvas();
+	void Event();
+	void CloseCheck();
+	void End();
+};
+
