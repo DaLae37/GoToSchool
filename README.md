@@ -10,6 +10,6 @@
 
 # 플레이 방법
 
-[유튜브]
+[유튜브](https://youtu.be/BY9Hc3ZzcsY)
 
 [파일](https://github.com/DaLae37/GoToSchool/releases/download/v1.0.0/HowToPlay.pdf)
